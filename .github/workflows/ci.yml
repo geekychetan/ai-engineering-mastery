@@ -1,0 +1,46 @@
+# Continuous Integration — runs the test suite on every push and pull request.
+# You'll study this in Week 11 (Docker, CI). It gives every PR a green (or red)
+# check, so you never merge code that breaks the tests.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out your repository code onto the runner.
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      # 2. Install Python.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # 3. Install pytest, plus any project dependencies declared in a
+      #    requirements.txt anywhere in the repo (so each project's deps get installed).
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+          find . -name requirements.txt -not -path '*/.*' -print -exec pip install -r {} \;
+
+      # 4. Run the tests. pytest exits with code 5 when it finds NO tests yet —
+      #    early in the course that's expected, so we treat "no tests" as a pass.
+      - name: Run pytest
+        run: |
+          set +e
+          python -m pytest -q
+          code=$?
+          if [ "$code" -eq 5 ]; then
+            echo "No tests collected yet — passing. Add tests from Week 3 onward!"
+            exit 0
+          fi
+          exit $code
