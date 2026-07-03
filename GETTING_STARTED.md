@@ -18,6 +18,23 @@ The goal is **applied AI**: frame a problem → pick an approach → build it �
 
 Everything else (Python, VS Code, git, API keys, AWS) gets set up *inside* the curriculum, starting Day 1.
 
+### Set up the project in 3 commands
+
+This repo is a Python project managed by **[uv](https://docs.astral.sh/uv)** (a fast, all-in-one Python package & environment manager). `uv` installs the right Python version, creates the virtual environment, and installs dependencies for you — no manual `venv`/`pip` juggling.
+
+```bash
+# 1. Install uv (macOS, via Homebrew — see docs.astral.sh/uv for other OSes)
+brew install uv
+
+# 2. Install the project's dependencies (creates .venv/ automatically)
+uv sync
+
+# 3. Run the test suite to confirm everything works
+uv run pytest -q          # expect: 2 passed
+```
+
+That's it — anyone who clones the repo can run those three commands and have a working, tested environment. From here on, prefix Python commands with `uv run` (e.g. `uv run python daily/week-01/day-01/greet.py`) so they use the project's environment. To add a package later: `uv add <name>` (or `uv add --dev <name>` for tools like pytest).
+
 ## 3. How much time
 
 - **Minimum:** 5 focused hours/day, 5–6 days/week (keep **one rest day** — burnout ends aggressive plans).

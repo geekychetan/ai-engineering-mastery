@@ -77,6 +77,20 @@ Link a PR to its issue by writing `Closes #<issue-number>` in the PR description
 
 ---
 
+## Local setup (uv)
+
+This repo is a Python project managed with **[uv](https://docs.astral.sh/uv)**. After cloning, you're three commands from a working, tested environment:
+
+```bash
+brew install uv     # macOS (other OSes: https://docs.astral.sh/uv)
+uv sync             # creates .venv/ and installs dependencies
+uv run pytest -q    # run the test suite (expect: 2 passed)
+```
+
+Run Python through the project env with `uv run` (e.g. `uv run python daily/week-01/day-01/greet.py`). Add packages with `uv add <name>` (`--dev` for tooling like pytest).
+
+---
+
 ## Repo layout
 
 ```
