@@ -23,7 +23,7 @@ When explaining things: assume strong analytical/business thinking, but do **not
 | 4 | 10-11 | Cloud & Deployment on AWS (EC2, Docker, CI) |
 | 5 | 12-15 | Capstone + Portfolio + Interview prep |
 
-Full detail lives in `curriculum/phase-*/README.md`. Design rationale is in the approved plan; don't re-litigate settled decisions (merged git into Python; CS50P not CS50x; ML compressed to 1 week) unless asked.
+Full detail lives in `curriculum/phase-*/README.md`. Design rationale is in [`docs/CURRICULUM_DESIGN.md`](docs/CURRICULUM_DESIGN.md); don't re-litigate settled decisions (merged git into Python; CS50P not CS50x; ML compressed to 1 week) unless asked.
 
 ## The three habits to reinforce in every project
 
