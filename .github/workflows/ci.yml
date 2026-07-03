@@ -22,7 +22,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
+        # (pip caching can be added later via `cache: pip` once a
+        #  requirements.txt / pyproject.toml exists in the repo.)
 
       # 3. Install pytest, plus any project dependencies declared in a
       #    requirements.txt anywhere in the repo (so each project's deps get installed).
