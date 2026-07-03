@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data & models (keep the repo light)
+*.csv
+*.parquet
+*.sqlite
+*.db
+*.gguf
+*.bin
+*.pt
+*.pth
+data/
+models/
+!**/sample_data/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
