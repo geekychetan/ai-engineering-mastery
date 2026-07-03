@@ -92,6 +92,8 @@ templates/    # daily README, project brief, weekly review
 
 ## Start here
 
-1. Read this README and [PROGRESS.md](PROGRESS.md).
+New to this planner? Read **[GETTING_STARTED.md](GETTING_STARTED.md)** first — a self-contained quickstart.
+
+1. Read [GETTING_STARTED.md](GETTING_STARTED.md), then skim this README and [PROGRESS.md](PROGRESS.md).
 2. Open [curriculum/phase-1-python-git](curriculum/phase-1-python-git/README.md).
 3. Go to [daily/week-01/day-01](daily/week-01/day-01/README.md) and begin.
