@@ -45,7 +45,7 @@
 7. [ ] Confirm the issue auto-closed when the PR merged.
 
 ## Reflection (fill at end of day, 10 min)
-- **What clicked:**
-- **What's still fuzzy:**
-- **One thing to review tomorrow:**
-- **Time actually spent:**
+- **What clicked:** Learned brew installation, gh library, uv package manager
+- **What's still fuzzy:** learning terminal commands
+- **One thing to review tomorrow:** Revise and practice terminal commands
+- **Time actually spent:** 3 hours
